@@ -1,6 +1,15 @@
 @import url("global2.css");
 
+* {
+  font-family: "Raleway", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
+    background-color: var(--primary-color);
+    color: var(--text-color);
     background-image: url(../images/background-movies-series.png);
     background-size: cover;
     height: 100vh;
@@ -10,7 +19,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     font-family: "Quicksand", cursive;
+    max-width: 1200px;
     width: 100%;
     height: 70%;
     padding: 24px;
@@ -18,6 +29,38 @@ body {
 
 .menu {
     position: relative;
+    width: 100%;
+    padding: 12px 16px;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--nav-bg-color);
+    z-index: 1;
+}
+
+.menu__logo {
+  max-width: 160px;
+}
+
+.menu__logo-image {
+  width: 100%;
+}
+
+.menu__item {
+  margin-right: 24px;
+  font-weight: 700;
+  font-size: 0.75rem;
+  color: var(--text-color);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.menu__item--button {
+  padding: 8px 26px;
+  transition: background 1s, color 1s;
 }
 
 .login {
@@ -70,7 +113,25 @@ body {
     margin-left: 24px;
     font-weight: bold;
 }
+
+.footer__link {
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  color: var(--link-color);
+  text-transform: uppercase;
+  text-decoration: none;
+  margin: 0 14px;
+  letter-spacing: 2px;
+  transition: color 0.5s;
+  font-size: 0.875rem;
+}
   
+.footer__legal {
+  font-size: 0.75rem;
+  margin: 16px 0;
+  color: var(--link-color);
+}
+
   /* Media Queries */
   
   @media screen and (max-width: 480px) {
